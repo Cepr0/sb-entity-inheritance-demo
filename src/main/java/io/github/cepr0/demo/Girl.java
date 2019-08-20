@@ -1,9 +1,9 @@
 package io.github.cepr0.demo;
 
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
-@DiscriminatorValue(value = "GIRL")
+@Table(name = "girls")
 public class Girl extends Child {
 }

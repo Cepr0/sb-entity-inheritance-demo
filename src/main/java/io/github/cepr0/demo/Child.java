@@ -9,8 +9,7 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name = "children")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "type")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Child extends BaseEntity {
 
 	@Column(length = 32)
