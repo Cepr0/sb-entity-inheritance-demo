@@ -11,8 +11,8 @@ import javax.persistence.*;
 public abstract class BaseEntity {
 
 	@Id
-	@GeneratedValue(generator = "gen")
-	@SequenceGenerator(name = "global_sequence")
+	@GeneratedValue(generator = "global_sequence")
+	@SequenceGenerator(name = "global_sequence", allocationSize = 10)
 	private Integer id;
 
 	@Version
