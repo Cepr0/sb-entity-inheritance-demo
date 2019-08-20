@@ -64,7 +64,7 @@ public class Application {
 	public void replaceChild() {
 		log.info("[i] Updating children...");
 		parentRepo.getForUpdateById(parent.getId()).ifPresent(parent -> parent
-				.removeChild(childRepo.getOne(children.get(1).getId())) // -> Boy2
+				.removeChild(childRepo.getOne(children.get(1).getId())) // -> remove Boy2
 				.addChild(new Girl().setName("Girl1"))
 		);
 	}
@@ -73,6 +73,6 @@ public class Application {
 	@EventListener(ApplicationReadyEvent.class)
 	public void check() {
 		log.info("[i] Checking data...");
-		parentRepo.getById(1);
+		parentRepo.getById(parent.getId());
 	}
 }
